@@ -1,0 +1,46 @@
+html
+  height: 100%
+
+body
+  height: 100%
+
+#_nuxt
+  height: 100%
+
+#_layout
+  height: 100%
+
+.page
+  height: 100%
+  &__wrapper
+    height: 100%
+    display: flex
+    flex-direction: column
+  &__content
+    flex: 1 0 auto
+  &__footer
+    flex: 0 0 auto
+
+.flex
+  display: flex
+  flex-wrap: wrap
+  &_content-between
+    justify-content: space-between
+  &_content-center
+    justify-content: center
+  &_content-around
+    justify-content: space-around
+  &_content-end
+    justify-content: flex-end
+  &_items-center
+    align-items: center
+  &_items-start
+    align-items: flex-start
+  &_items-stretch
+    align-items: stretch
+
+.container
+  max-width: 1190px
+  width: 100%
+  margin: 0 auto
+  padding: 0 10px

@@ -1,0 +1,55 @@
+.loader
+  background-color: #0b1015
+  position: fixed
+  z-index: $loader-index
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  transition: all .25s
+  &__wrapper
+    min-height: 100vh
+    justify-content: center
+  &__wrap
+    text-align: center
+  &__svg
+    max-width: 200px
+    path
+      fill: $blue
+  &__text
+    color: #fff
+    padding-top: 5px
+    +fz(20)
+    span
+      position: relative
+      &::after
+        position: absolute
+        bottom: -4px
+        left: 100%
+        content: '....'
+        width: 0
+        overflow: hidden
+        animation: dots 1s ease infinite
+
+
+
+@keyframes dots
+  0%
+    width: 0
+
+  25%
+    width: 5px
+
+  50%
+    width: 10px
+
+  75%
+    width: 15px
+
+  100%
+    width: 20px
+
+
+.loader-leave-to
+  opacity: 0
+

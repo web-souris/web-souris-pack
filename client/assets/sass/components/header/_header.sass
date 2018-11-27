@@ -1,0 +1,18 @@
+.header
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  padding: 15px 0
+  z-index: $header-index
+  &_white
+    color: $dark-theme
+    background-color: $dark-bg
+  &_dark
+    color: $white-theme
+    background-color: $white-bg
+
+
+@media screen and (max-width: 768px)
+  .header
+    padding: 10px 0

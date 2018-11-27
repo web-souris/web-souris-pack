@@ -1,0 +1,65 @@
+.about
+  display: flex
+  justify-content: space-between
+  align-items: center
+  overflow: hidden
+  &__left
+    flex-basis: 50%
+    padding: 75px 0
+  &__right
+    flex-basis: 49%
+
+  &__title
+    padding: 20px 0 20px
+  &__text
+    +fz(15)
+    color: #3b3b3b
+    p
+      padding-bottom: 10px
+      &:last-child
+        padding-bottom: 0
+      &:first-letter
+        padding-left: 5px
+
+  &__link
+    +fz(14)
+    padding-top: 30px
+    a
+      color: $blue
+      text-decoration: none
+
+  &__wrap
+    position: relative
+    text-align: center
+  &__dots
+    background-image: url(/img/dots.png)
+    width: 151px
+    min-height: 100vh
+    height: 100%
+    margin: 0 auto
+  &__round
+    width: 470px
+    height: 470px
+    -webkit-border-radius: 250px
+    -moz-border-radius: 250px
+    border-radius: 250px
+    background-color: $blue
+    position: absolute
+    top: 50%
+    transform: translateY(-50%) translateX(-50%)
+    left: 50%
+  &__mouse
+    width: 272px
+    height: 497px
+    background-image: url(/img/mouse-hover.png)
+    background-repeat: no-repeat
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+
+@media screen and (max-width: 1170px)
+  .about
+    &__left
+      flex-basis: 100%
+    &__right
+      display: none

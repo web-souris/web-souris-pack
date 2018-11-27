@@ -1,0 +1,35 @@
+{
+  "name": "api.web-souris",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "cache-manager": "^2.9.0",
+    "cache-manager-express-mw": "^0.3.5",
+    "cache-manager-fs": "^1.0.7",
+    "cors": "^2.8.4",
+    "delete": "^1.1.0",
+    "express": "^4.16.4",
+    "faker": "^4.1.0",
+    "geoip-lite": "^1.3.2",
+    "joi": "^14.0.1",
+    "load-json-file": "^5.1.0",
+    "mkdirp": "^0.5.1",
+    "moment": "^2.22.2",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.1",
+    "multer-s3-transform": "^2.3.2",
+    "mysql2": "^1.6.1",
+    "nodemailer": "^4.6.8",
+    "sequelize": "^4.41.0",
+    "transliteration": "^1.6.6"
+  }
+}

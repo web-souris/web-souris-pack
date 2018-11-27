@@ -1,0 +1,111 @@
+.section_work
+  padding: 0
+  .container
+    padding: 75px 10px
+    background-image: url(/img/works-bg.png)
+    background-repeat: no-repeat
+    background-position: 95% bottom
+
+.work
+  position: relative
+  &_index
+    flex-basis: 32%
+  a
+    text-decoration: none
+  &__title
+    +fz(18)
+    color: #fff
+    font-weight: 500
+    padding-bottom: 10px
+    &_big
+      +fz(34)
+      padding-bottom: 0
+      font-weight: 700
+
+  &__text
+    +fz(15)
+    color: #c1c1c1
+    &_main
+      +fz(18)
+      span
+        color: $blue
+        font-weight: 500
+      .small
+        padding-top: 10px
+        +fz(13)
+
+  &__link
+    text-align: center
+    a
+      text-decoration: none
+      color: $blue
+      text-transform: uppercase
+      font-weight: bold
+      i
+        padding-left: 15px
+
+  &__wrap
+    height: 300px
+    display: flex
+    align-items: center
+    justify-content: center
+
+  &__image
+    max-width: 200px
+
+  &__content
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: rgba(#000, .7)
+    opacity: 0
+    transition: all .25s
+    padding: 20px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    color: #fff
+  &__top
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__left
+    font-size: 14px
+    color: #ffd6ab
+    font-weight: 500
+  &__bottom
+    p
+      font-size: 15px
+      color: #c1c1c1
+  &:hover
+    .work
+      box-shadow: 0px 15px 35px 0 rgba(0, 0, 0, 0.45)
+      &__content
+        opacity: 1
+
+@media screen and (max-width: 992px)
+  .work
+    margin-bottom: 25px
+    &_index
+      flex-basis: 48%
+    &__wrap
+      flex-wrap: wrap
+      height: auto
+    &__content
+      position: relative
+      flex-basis: 100%
+      opacity: 1
+    &__image
+      padding: 20px 0
+  .section_work .flex
+    align-items: stretch
+
+@media screen and (max-width: 768px)
+  .work
+    flex-basis: 100%
+  .section_work
+    .container
+      padding-bottom: 150px
+      background-position: bottom center

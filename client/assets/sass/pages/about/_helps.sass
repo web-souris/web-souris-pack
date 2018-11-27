@@ -1,0 +1,77 @@
+.helps
+  text-align: center
+  &__text
+    +fz(15)
+    text-align: center
+    color: #67676a
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+  &__wrap
+    padding-top: 20px
+    text-align: center
+    display: flex
+    justify-content: center
+
+.help
+  flex-basis: 32%
+  -webkit-border-radius: 5px
+  text-align: center
+  -moz-border-radius: 5px
+  border-radius: 5px
+  box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.25)
+  background-color: #fff
+  padding: 50px 40px
+  margin-bottom: 25px
+  transition: all .25s
+  &:hover
+    box-shadow: 0px 1px 18px 0 rgba(0, 0, 0, 0.25)
+    transform: scale(1.15)
+
+  &__image
+    height: 70px
+    z-index: 3
+  &__wrapper
+    position: relative
+    width: 96px
+    z-index: 2
+    margin: 0 auto
+  &__small
+    width: 11px
+    height: 11px
+    border: solid 4px #ffd6ab
+    -webkit-border-radius: 10em
+    -moz-border-radius: 10em
+    border-radius: 10em
+    position: absolute
+    z-index: -1
+  &__big
+    width: 35px
+    height: 35px
+    border: solid 10px #ffd6ab
+    -webkit-border-radius: 10em
+    -moz-border-radius: 10em
+    border-radius: 10em
+    position: absolute
+    z-index: -1
+  &__text
+    +fz(15)
+    color: #393939
+  &__title
+    padding-top: 25px
+    padding-bottom: 10px
+    font-weight: 500
+    +fz(22)
+    color: #202028
+
+@media screen and (max-width: 992px)
+  .help
+    flex-basis: 49%
+
+@media screen and (max-width: 768px)
+  .help
+    flex-basis: 100%
+    max-width: 320px
+    margin-left: auto
+    margin-right: auto

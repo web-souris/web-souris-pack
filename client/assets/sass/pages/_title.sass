@@ -1,0 +1,21 @@
+.title
+  +fz(34)
+  font-weight: bold
+  &_dark
+    color: $dark
+  &_white
+    color: #fff
+  &_big
+    +fz(48)
+
+.subtitle
+  font-weight: bold
+  +fz(15)
+  text-transform: uppercase
+  &_blue
+    color: $blue
+
+@media screen and (max-width: 768px)
+  .title
+    &_big
+      +fz(32)

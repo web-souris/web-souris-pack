@@ -1,0 +1,21 @@
+.logo
+  flex-basis: 40%
+  text-align: center
+  &__svg
+    max-width: 120px
+    margin: 0 auto
+  &__mouse
+    fill: $blue
+  &__text
+    &_dark
+      fill: $white-theme
+    &_white
+      fill: $dark-theme
+
+@media screen and (max-width: 992px)
+  .logo
+    &__svg
+      max-width: 100px
+@media screen and (max-width: 768px)
+  .logo
+    text-align: right
