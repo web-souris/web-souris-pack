@@ -14,7 +14,6 @@
       scrollTop() {
         var scroller = window.pageYOffset
         var t = setInterval(function () {
-          console.log(scroller)
           window.scrollTo(0, scroller - 150)
           scroller = scroller - 150
           if(scroller <= 0) {
@@ -27,25 +26,3 @@
     }
   }
 </script>
-
-<style scoped lang="less">
-  .top {
-    width: 50px;
-    height: 50px;
-    position: fixed;
-    z-index: 1000;
-    top: 50%;
-    left: 10px;
-    cursor: pointer;
-    -webkit-border-radius: 10em;
-    -moz-border-radius: 10em;
-    border-radius: 10em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translateY(-50%);
-    i {
-      font-size: 35px;
-    }
-  }
-</style>

@@ -1,36 +1,50 @@
 <template>
-  <section class="section section_dark section_full section_image flex flex_ic" data-type-header="dark" data-type-footer="white" style="background-image: url(/img/first-background.jpg)">
-    <div class="container flex flex_jcsb flex_ic">
-      <div class="left">
-        <h1>Ой, что-то пошло не так!</h1>
-        <p class="first-p">Возможно страница находится в разработке, или её  не существует!
-          Вы можете воспользоваться услугой и заказать звонок для
-          консультации или вернуться на главную страницу.
-        </p>
-        <div class="footer">
-          <div>
-            <button class="button" @click="changeForm(true)">Заказать звонок</button>
+  <div>
+    <section class="section section_dark section_full section_image flex flex_items-center"
+             data-type-header="dark" data-type-footer="white" style="background-image: url(/img/first-background.jpg)">
+      <div class="container flex flex_items-center flex_content-between">
+        <div class="left">
+          <h1>Ой, что-то пошло не так!</h1>
+          <p class="first-p">Возможно страница находится в разработке, или её  не существует!
+            Вы можете воспользоваться услугой и заказать звонок для
+            консультации или вернуться на главную страницу.
+          </p>
+          <div class="footer">
+            <div>
+              <button class="button" @click="changeForm(true)">Заказать звонок</button>
+            </div>
+            <div class="link__wrap">
+              <nuxt-link to="/" class="link">На главную</nuxt-link>
+            </div>
           </div>
-          <div class="link__wrap">
-            <nuxt-link to="/" class="link">На главную</nuxt-link>
-          </div>
-        </div>
 
+        </div>
+        <div class="right">
+          {{getStatusError}}
+        </div>
       </div>
-      <div class="right">
-        {{getStatusError}}
-      </div>
-    </div>
-  </section>
+    </section>
+    <main-form v-if="getForm"></main-form>
+    <response-message v-if="getResponseMessage != null"></response-message>
+  </div>
 </template>
 <script>
-  import {mapMutations} from 'vuex'
+  import {mapMutations, mapGetters} from 'vuex'
+  import MainForm from '~/components/MainForm'
+  import ResponseMessage from '~/components/ResponseMessage'
   export default {
+    components: {
+      MainForm,
+      ResponseMessage
+    },
+    middleware: ['middlewareClose'],
+    layout: ['errors'],
     computed: {
       getStatusError() {
         const status = this.error ? this.error.statusCode : 404
         return status
-      }
+      },
+      ...mapGetters(['getForm', 'getResponseMessage'])
     },
     methods: {
       ...mapMutations(['changeForm'])
@@ -70,10 +84,10 @@
     width: 85%;
   }
   .left {
-    flex-basis: 46%;
+    flex-basis: 40%;
   }
   .right {
-    flex-basis: 65%;
+    flex-basis: 59%;
     text-align: center;
     color: #fff;
     font-size: 30vh;

@@ -1,0 +1,100 @@
+@import "news"
+
+.article
+  position: relative
+  flex-basis: 32%
+  transition: all .25s
+  -webkit-border-radius: 5px
+  -moz-border-radius: 5px
+  border-radius: 5px
+  overflow: hidden
+  box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.25)
+  &__link
+    text-decoration: none
+    color: #202028
+    transition: all .25s
+
+  &:hover
+    box-shadow: 0px 5px 25px 0 rgba(0, 0, 0, 0.35)
+    .article__link
+      color: #ffff
+    .article__image
+      opacity: 1
+
+
+  &__content
+    padding: 50px 30px
+    position: relative
+    z-index: 2
+
+  &__image
+    transition: all .25s
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-repeat: no-repeat
+    -webkit-background-size: cover
+    background-size: cover
+    background-position: center
+    opacity: 0
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background-color: rgba(#202028, .7)
+
+
+  &__text
+    +fz(15)
+    padding-bottom: 10vh
+
+  &__footer
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &__right
+    width: 50px
+    height: 50px
+    text-align: center
+    -webkit-border-radius: 10em
+    -moz-border-radius: 10em
+    border-radius: 10em
+    background-color: #0baae3
+    display: flex
+    justify-content: center
+    align-items: center
+    i
+      +fz(20)
+
+
+
+  &__title
+    +fz(18)
+    font-weight: 500
+    padding-bottom: 35px
+
+@media screen and (max-width: 992px)
+  .article
+    margin-bottom: 25px
+    &__link
+      color: #fff
+
+    &__image
+      opacity: 1
+
+
+
+@media screen and (max-width: 768px)
+  .article
+    flex-basis: 100%
+    max-width: 320px
+    margin-left: auto
+    margin-right: auto
+
+
