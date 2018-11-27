@@ -1,5 +1,5 @@
 <template>
-  <main data-type-header="dark" data-type-footer="dark" class="page">
+  <main data-type-header="dark" data-type-footer="dark" class="main">
     <div class="container">
       <h1>Портфолио</h1>
       <div class="subtitle">
@@ -13,7 +13,7 @@
         </div>
       </div>
       <div class="works">
-        <work-item v-for="item in works.rows" :key="item.id" :item="item" class="item"></work-item>
+        <work-item v-for="item in works.rows" :key="item.id" :item="item" class="work_page"></work-item>
       </div>
       <div class="works__footer" v-if="works.count > works.rows.length">
         <button class="button" @click="loadMore">Загрузить еще</button>
@@ -153,7 +153,7 @@
       &:hover {
         color: #0baae3;
       }
-      &.nuxt-link-exact-active {
+      &.active-link {
         color: #0baae3;
         border-bottom: 1px solid #0baae3;
       }
@@ -163,9 +163,6 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    .item {
-      flex-basis: 49%;
-    }
     &__footer {
       padding-top: 20px;
       text-align: center;

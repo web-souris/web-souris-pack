@@ -1,0 +1,66 @@
+.footer-form
+  background-color: #fff
+  padding: 50px 30px
+  position: relative
+  margin: 0 auto
+  &__error
+    display: block
+    color: red
+    +fz(12)
+    text-align: right
+    position: absolute
+    top: 50%
+    right: 5px
+
+  &__input,
+  &__textarea
+    border-radius: 23px
+    border: solid 1px rgba(#000, .5)
+    background-color: transparent
+    width: 100%
+    padding: 12px 15px
+    font-size: 14px
+    color: #000
+    transition: all .25s
+    &::placeholder
+      color: rgba(#000, .5)
+    &:hover
+      border-color: #000
+    &_error
+      border-color: red
+  &__textarea
+    resize: vertical
+  &__item
+    padding-top: 20px
+    color: #202028
+    position: relative
+    flex-basis: 100%
+    &_button
+      text-align: center
+      padding-bottom: 5px
+      .button
+        width: 80%
+    &_half
+      flex-basis: 48%
+    &_last
+      padding-top: 5px
+    p
+      width: 90%
+      margin: 0 auto
+      font-size: 13px
+      text-align: center
+      a
+        color: #0baae3
+  &__wrap
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+@media screen and (max-width: 768px)
+  .footer-form
+    padding: 20px 10px
+    &__item
+      &_half
+        flex-basis: 100%
+
+

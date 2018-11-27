@@ -169,7 +169,7 @@
   }
   svg {
     max-width: 120px;
-    path {
+    * {
       fill: #fff;
     }
   }

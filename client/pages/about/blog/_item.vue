@@ -1,6 +1,10 @@
 <template>
-  <main data-type-header="dark" data-type-footer="dark" class="page">
+  <main data-type-header="dark" data-type-footer="dark" class="main">
     <div class="container">
+      <div class="back">
+        <nuxt-link to="/about/blog"><i class="fas fa-arrow-left"></i> Назад к статьям</nuxt-link>
+      </div>
+      <h1>{{article.title}}</h1>
       <div v-html="article.content"></div>
       <div class="wrapper">
         <div class="left">
@@ -59,8 +63,22 @@
 </script>
 
 <style scoped lang="less">
+  .back {
+    padding-top: 10px;
+    a {
+      font-size: 16px;
+      color: #0baae3;
+      text-transform: uppercase;
+      text-decoration: none;
+      i {
+        padding-right: 5px;
+      }
+
+    }
+  }
   .wrapper {
     display: flex;
+    padding-top: 25px;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;

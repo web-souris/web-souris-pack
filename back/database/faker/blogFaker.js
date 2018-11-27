@@ -18,7 +18,8 @@ module.exports = (database) => {
                         title: faker.name.title(),
                         description: faker.lorem.sentences(2),
                         image: faker.lorem.slug(2)
-                    }
+                    },
+                    content: faker.lorem.paragraphs(6)
                 }).then(function (item) {
                 })
             }

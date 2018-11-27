@@ -1,26 +1,26 @@
 <template>
-  <section class="section" data-type-header="dark" data-type-footer="dark">
-    <div class="container">
-      <div class="left">
-        <h2>Наши контакты</h2>
-        <div class="item">
-          <a :href="'tel:' + getSetting.linkPhone">{{getSetting.phone}}</a>
+  <section class="section section_contacts" data-type-header="dark" data-type-footer="dark">
+    <div class="container contacts flex flex_content-between flex_items-center">
+      <div class="contacts__left">
+        <h2 class="title_dark title">Наши контакты</h2>
+        <div class="contacts__item">
+          <a class="contacts__link" :href="'tel:' + getSetting.linkPhone">{{getSetting.phone}}</a>
         </div>
-        <div class="item">
-          <a :href="'mailto:' + getSetting.email">{{getSetting.email}}</a>
+        <div class="contacts__item">
+          <a class="contacts__link" :href="'mailto:' + getSetting.email">{{getSetting.email}}</a>
         </div>
-        <div class="item">
-          <span>{{getSetting.address}}</span>
+        <div class="contacts__item">
+          <span class="contacts__link">{{getSetting.address}}</span>
         </div>
-        <div class="item item__social">
-          <div class="social" v-for="(item, index) in getSocial" :key="index">
+        <div class="contacts__item contacts__item_social">
+          <div class="contacts__social" v-for="(item, index) in getSocial" :key="index">
             <a :href="item.link" target="_blank">
               <i :class="item.icon"></i>
             </a>
           </div>
         </div>
       </div>
-      <div class="right">
+      <div class="contacts__right">
         <fotter-form></fotter-form>
       </div>
     </div>

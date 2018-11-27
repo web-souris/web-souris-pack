@@ -1,9 +1,9 @@
 <template>
-  <main class="page_portfolio">
+  <main class="page_portfolio main">
     <section class="section section_first" :style="{'background': work.background}" :data-type-header="work.content.firstScreen.headerTheme"
              :data-type-footer="work.content.firstScreen.footerTheme">
       <div class="container">
-        <div class="top">
+        <div class="back">
           <nuxt-link to="/about/portfolio" :style="{color: work.content.firstScreen.headerTheme == 'white' ?  '#fff' : '#000'}"><i class="fas fa-arrow-left"></i> Назад в портфолио</nuxt-link>
         </div>
         <div class="wrapper">
@@ -67,7 +67,7 @@
       <div class="container">
         <h2 style="text-align: center;">Другие наши работы</h2>
         <div class="other">
-          <works-item v-for="(item, index) in random" :key="index" :item="item"></works-item>
+          <works-item class="work_index" v-for="(item, index) in random" :key="index" :item="item"></works-item>
         </div>
       </div>
     </section>
@@ -122,7 +122,7 @@
 
 <style scoped lang="less">
   .section_first {
-    padding: 75px 0 5vh;
+    padding: 0px 0 5vh;
     .wrapper {
       align-items: center;
       display: flex;
@@ -148,7 +148,7 @@
       }
     }
   }
-  .top {
+  .back {
     padding-top: 10px;
     a {
       font-size: 16px;

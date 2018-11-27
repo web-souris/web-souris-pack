@@ -1,0 +1,42 @@
+.section_contacts
+  background-color: #ffe8d0
+  background-image: url(/img/contacts-bg.jpg)
+  background-repeat: no-repeat
+  background-position: 20% bottom
+  min-height: 800px
+  display: flex
+  align-items: stretch
+  a
+    text-decoration: none
+.contacts
+  &__left
+    flex-basis: 40%
+    padding: 40px 30px
+    background-color: #eeeeee
+  &__item
+    padding-bottom: 6px
+    &_social
+      padding-top: 15px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      a
+        color: #191919
+      i
+        +fz(20)
+  &__link, a
+      color: #191919
+      font-weight: 500
+
+  &__right
+    flex-basis: 59%
+
+@media screen and (max-width: 768px)
+  .contacts
+    &__left
+      flex-basis: 100%
+      margin-bottom: 20px
+
+    &__right
+      flex-basis: 100%
+

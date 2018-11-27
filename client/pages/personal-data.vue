@@ -1,5 +1,5 @@
 <template>
-    <div class="page">
+    <div class="main">
       <div class="container">
         <h1>Обработка персональных данных</h1>
         <p>

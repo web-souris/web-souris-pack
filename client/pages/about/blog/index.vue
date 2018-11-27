@@ -1,8 +1,8 @@
 <template>
-  <main data-type-header="dark" data-type-footer="dark" class="page">
+  <main data-type-header="dark" data-type-footer="dark" class="main">
     <div class="container">
-      <h1>Статьи</h1>
-      <div class="subtitle">
+      <h1 class="title title_dark title_big">Статьи</h1>
+      <div class="subtitle subtitle_blue">
         Любая полезная информация<br/>
         на ваш вкус
       </div>

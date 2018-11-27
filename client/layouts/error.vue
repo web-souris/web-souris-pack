@@ -37,6 +37,11 @@
       MainForm,
       ResponseMessage
     },
+    head() {
+      return {
+        title: 'Ошибка. Страница не найдена'
+      }
+    },
     middleware: ['middlewareClose'],
     layout: ['errors'],
     computed: {

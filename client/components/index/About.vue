@@ -7,21 +7,16 @@
           <h2 class="title title_dark about__title">Полный цикл работ,
             для достижения результата!</h2>
           <div class="about__text">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet
-              dicta dignissimos eveniet excepturi exercitationem facere id minima minus molestiae
-              nam necessitatibus nihil quae quasi repellendus sequi tempore, vel! Sapiente.</p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Aliquam aliquid consequatur debitis dolore, enim inventore minima nisi non ut vero. Aspernatur at ea fugiat iure libero nemo, neque sit. Expedita.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Aliquam aliquid consequatur debitis dolore, enim inventore minima nisi non ut vero. Aspernatur at ea fugiat iure libero nemo, neque sit. Expedita.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Aliquam aliquid consequatur debitis dolore, enim inventore minima nisi non ut vero. Aspernatur at ea fugiat iure libero nemo, neque sit. Expedita.
-            </p>
+            <p>Наша команда занимается:</p>
+            <ul>
+              <li>Созднием сайтов</li>
+              <li>Разработкой фирменного стиля</li>
+              <li>Оформлением и продвижением социальных сетей</li>
+              <li>Продвижением сайтов</li>
+            </ul>
+            <p>Компания создана в конце 2017 года и уже успела поучаствовать в 10-ти крупных проектах. А сумарный опыт нашей команды в разработке и продвижении проектов любой сложности 10 лет. Более подробную информацию вы можете прочитать нажав "Узнать больше".</p>
+            <p>Мы молодая команда, которая постоянно развивается, поэтому будьте уверены, ваш проект будет сделан с поддержкой всех новейших технологий.</p>
+            <p>Мы постоянно проводим акции для наших любимых клиентов, для того чтобы узнать о них одним из первых свяжитесь с нами через форму обратной связи.</p>
           </div>
           <div class="about__link">
             <nuxt-link to="/about">Узнать больше ></nuxt-link>
